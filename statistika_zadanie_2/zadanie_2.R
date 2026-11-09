@@ -29,7 +29,7 @@ nrow(data)
 #' je vo viacerých playlistoch. Každú skladbu som nechal len raz. Po čistení ostalo 28 352 skladieb.
 #' Dátové typy sú v poriadku: čísla sú num/int a texty chr. Žáner som zmenil na faktor (kategorická premenná).
 #' Dátum vydania je uložený ako text, ale v analýze ho nepoužívam.
-
+#'
 #' ## Porovnanie žánrov (tanečnosť)
 
 table(data$playlist_genre)
@@ -43,7 +43,7 @@ tapply(data$danceability, data$playlist_genre, sd)
 #' Rozptyl je vo všetkých žánroch podobný (0.014-0.020, smerodajná odchýlka 0.12-0.14).
 #' Najväčší rozptyl má rock a najmenší latin. Medián je vo väčšine žánrov trochu vyšší ako priemer,
 #' lebo v nich je aj pár veľmi netanečných skladieb.
-
+#'
 #' ## Grafy
 
 boxplot(danceability ~ playlist_genre, data = data, col = "lightblue",
@@ -65,7 +65,7 @@ barplot(tapply(data$track_popularity, data$playlist_genre, mean), col = "lightbl
         main = "Priemerná popularita podľa žánru", xlab = "Žáner", ylab = "Popularita (0-100)")
 
 #' Najpopulárnejší je pop (priemer 45.9) a najmenej populárne je EDM (30.7). Ostatné žánre majú 36-42.
-
+#'
 #' ## Záver
 #' Žánre sa najviac líšia v tanečnosti. Rap a latin sú najtanečnejšie a rock najmenej.
 #' Variabilita tanečnosti je vo všetkých žánroch podobná. Najpopulárnejšie sú popové skladby
