@@ -50,12 +50,10 @@ boxplot(danceability ~ playlist_genre, data = data, col = "lightblue",
 #' Boxplot ukazuje, že krabica rocku je výrazne nižšie ako pri ostatných žánroch. Najvyššie sú rap a latin.
 #' Krabice ostatných žánrov sa dosť prekrývajú. Odľahlé hodnoty sú hlavne dole, sú to veľmi netanečné skladby. Pri rocku sú aj hore.
 
-par(mfrow = c(1, 2))
 hist(data$danceability[data$playlist_genre == "rap"], breaks = seq(0, 1, 0.05), col = "orange",
      main = "Rap", xlab = "Tanečnosť", ylab = "Počet skladieb")
 hist(data$danceability[data$playlist_genre == "rock"], breaks = seq(0, 1, 0.05), col = "lightgreen",
      main = "Rock", xlab = "Tanečnosť", ylab = "Počet skladieb")
-par(mfrow = c(1, 1))
 
 #' Histogramy porovnávajú rap a rock, teda žánre s najväčším rozdielom. Rap je posunutý doprava,
 #' väčšina skladieb má tanečnosť 0.6-0.9 a rozdelenie je zošikmené doľava. Rock má stred okolo 0.5
