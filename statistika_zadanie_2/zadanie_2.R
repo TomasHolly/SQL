@@ -7,6 +7,8 @@
 #' Číselné premenné sú napr. danceability (tanečnosť 0-1), energy, tempo, track_popularity (0-100)
 #' a duration_ms. Kategorické premenné sú napr. playlist_genre (6 žánrov), playlist_subgenre a track_artist.
 
+setwd("C:/PROGRAMOVANIE/masta/zadanie_2")
+
 data <- read.csv("spotify_songs.csv")
 dim(data)
 str(data)
